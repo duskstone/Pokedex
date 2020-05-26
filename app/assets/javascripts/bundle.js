@@ -190,16 +190,11 @@ var PokemonIndex = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var allPokes = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "there is no truth");
-
-      if (this.state.entities.pokemon) {
-        allPokes = this.allPokemon.map(function (poke) {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-            key: poke.id
-          }, poke.name);
-        });
-      }
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, allPokes);
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.allPokemon.map(function (poke) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: poke.id
+        }, poke.name);
+      }));
     }
   }]);
 
