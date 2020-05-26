@@ -2,12 +2,12 @@ class Api::PokemonController < ApplicationController
 
     def index()
         @pokemon = Pokemon.all
-        render json: @pokemon
+        render :index
     end
 
     def show()
         @poke = Pokemon.find(params[:id])
-        render json: @poke 
+        render "show"
     end
 
 end
