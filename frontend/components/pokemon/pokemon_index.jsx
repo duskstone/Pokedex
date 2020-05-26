@@ -12,14 +12,11 @@ export default class PokemonIndex extends React.Component {
     
     render(){
     var allPokes = <li>there is no truth</li>
-        if ( this.state.entities.pokemon){
-            allPokes = this.allPokemon.map((poke) => {
-                return <li key={poke.id}>{poke.name}</li>
-            })
-        }
         return(
             <ul>
-                { allPokes }
+                { this.props.allPokemon.map((poke) => {
+                    return <li key={poke.id}>{poke.name}</li>
+                }) }
             </ul>
         )
     }
